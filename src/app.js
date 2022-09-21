@@ -6,7 +6,7 @@ const app = express();
 const pathdirectory = path.join(__dirname, '../public');
 const partialsdirectory = path.join(__dirname, '../templates/partials');
 const viewsdirectory = path.join(__dirname, '../templates/views');
-
+const port = process.env.PORT || 3000
 
 
 
@@ -38,6 +38,6 @@ app.get('/weather', (req, res) => {
     res.send('hello weather')
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('running on port 3000');
 })
